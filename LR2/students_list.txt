@@ -1,0 +1,25 @@
+
+{
+	"StudentList": [{
+			"last_name": "Баева",
+			"first_name": "Диана",
+			"surname": "Николаевна",
+			"phone": "+78003535555",
+			"id": "35"
+		},
+		{
+			"last_name": "Баев",
+			"first_name": "Андрей",
+			"surname": "Николаевич",
+			"git": "@coo1_pr0gramm3r",
+			"id": "0"
+		},
+		{
+			"last_name": "Фамилия",
+			"first_name": "Имя",
+			"surname": "Отчество",
+			"id": "45",
+			"telegram": "@make_america_great_again"
+		}
+	]
+}
