@@ -29,26 +29,39 @@ class Student < Student_short
     end
 
 
-    #конструктор 
-    def initialize(last_name, first_name, surname, id: nil, phone: nil, email: nil, telegram: nil)
+    # стандартный конструктор
+    def initialize(last_name, first_name, surname, id: nil, git: nil, phone: nil, email: nil, telegram: nil)
         self.last_name = last_name
         self.first_name = first_name
         self.surname = surname
         self.id = id
         self.git = git
         set_contacts(phone: phone, email: email, telegram: telegram)
-       end
+    end
+
+
+    # конструктор принимающий на вход ХЭШ
+    def self.from_hash(hash)
+        raise ArgumentError, 'Missing fields: last_name, first_name, surname' unless hash.key?(:first_name) && hash.key?(:last_name) && hash.key?(:surname)
+
+        first_name = hash.delete(:first_name)
+        last_name = hash.delete(:last_name)
+        surname = hash.delete(:surname)
+
+        Student.new(first_name, last_name, surname, **hash)
+
+    end
 
     # конструктор из json-строки
     def self.init_from_json(str)
         result = JSON.parse(str)
         raise ArgumentError, 'Missing fields: last_name, first_name, surname' unless result.key?('first_name') && result.key?('last_name') && result.key?('surname')
+
         last_name = result.delete('last_name')
         first_name = result.delete('first_name')
-        surname = result.delete('surame')
+        surname = result.delete('surname')
         Student.new(last_name, first_name, surname, **result.transform_keys(&:to_sym))
     end
-
 
     # сеттеры 
     def first_name=(first_name)
@@ -93,11 +106,6 @@ class Student < Student_short
     end
 
 
-    # краткая информация о студенте
-    def getInfo
-        "#{short_name}, #{contact}, git=#{git}"
-    end
-
     # контакт
     def contact
         return @contact = "phone=#{phone}" unless phone.nil?
@@ -105,9 +113,14 @@ class Student < Student_short
         return @contact = "email=#{email}" unless email.nil?
         nil
     end
+    
+    # краткая информация о студенте
+    def getInfo
+        "#{short_name}, #{contact}, git=#{git}"
+    end
 
 
-    def set_contacts(phone:nil, telegram:nil, email:nil)
+    def set_contacts(phone: nil, telegram: nil, email: nil)
         self.phone = phone if phone
         self.telegram = telegram if telegram
         self.email = email if email
