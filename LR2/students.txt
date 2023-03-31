@@ -1,3 +1,5 @@
-last_name: "Баева", first_name: "Диана", id: 1
-last_name: "Шатохин", first_name: "Артем", id: 2, telegram: "@shah_ayo"
-last_name: "Голубин", first_name: "Глеб", id: 3, phone: "79181461800", email: "gol_gleb@gmail.com", git: "@ggleb"
+last_name: "Полетов", first_name: "Разбор", paternal_name: "Алексеевич", id: 1
+last_name: "Пиндосов", first_name: "Облом", paternal_name: "Баракович", id: 2, telegram: "@fakk_usa"
+last_name: "Атому", first_name: "Ли", paternal_name: "Ядала", id: 3, email: "goaloffway@mail.ru", git: "@vitaliyg"
+last_name: "Гераклов", first_name: "Поход", paternal_name: "Подвигоевич", id: 4, phone: "79698876534"
+last_name: "Братанов", first_name: "Друган", paternal_name: "Кентович", id: 5, phone: "+7 (777)-777-77-77"
