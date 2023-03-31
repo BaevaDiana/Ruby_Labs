@@ -10,14 +10,17 @@ class DataList
     self.selected_objects = []
   end
 
+  # добавить id в выборку
   def select(number)
     selected_objects.append(number)
   end
 
+  # очистить массив выборки
   def clear_select
     self.selected_objects = []
   end
 
+  # получить выделенные объекты
   def get_selected
     return [] if selected_objects.empty?
 
@@ -28,19 +31,34 @@ class DataList
     selected_id_list
   end
 
+  # применение паттерна Шаблон
+  def get_data
+    result = []
+    ind = 0
+    objects_list.each do |obj|
+      row = []
+      row << ind
+      # * необходима так как, если нам передадут [1,2,3], то передастся row.push(1,2,3)
+      row.push(*table_fields(obj))
+      result << row
+      ind += 1
+    end
+    DataTable.new(result)
+  end
 
   protected
 
-  def get_names
-    raise NotImplementedError, "get_names must be implemented in inheriting class"
-  end
+  # реализуется в наследниках
+  def get_names; end
 
-  def get_data
-    raise NotImplementedError, "get_data must be implemented in inheriting class"
-  end
-
-
-  # метод переопределяется у наследника
+  # теперь этот метод необходимо переопределять у наследников(если я правильно понял принцип паттерна)
   def table_fields(object)
     []
   end
+
+  private
+
+  attr_reader :objects_list
+  attr_accessor :selected_objects
+
+end

@@ -1,7 +1,7 @@
 require 'json'
 require_relative 'student_short'
 
-class Student < Student_short
+class Student < StudentShort
 
     # геттеры и сеттеры(стандартные)
     attr_writer :id
@@ -49,18 +49,21 @@ class Student < Student_short
         surname = hash.delete(:surname)
 
         Student.new(first_name, last_name, surname, **hash)
+    end
 
+    def to_hash
+        attrs = {}
+        %i[last_name first_name surname id phone telegram email git].each do |attr|
+            attr_val = send(attr)
+            attrs[attr] = attr_val unless attr_val.nil?
+        end
+        attrs
     end
 
     # конструктор из json-строки
     def self.init_from_json(str)
-        result = JSON.parse(str)
-        raise ArgumentError, 'Missing fields: last_name, first_name, surname' unless result.key?('first_name') && result.key?('last_name') && result.key?('surname')
-
-        last_name = result.delete('last_name')
-        first_name = result.delete('first_name')
-        surname = result.delete('surname')
-        Student.new(last_name, first_name, surname, **result.transform_keys(&:to_sym))
+        params = JSON.parse(str, { symbolize_names: true })
+        from_hash(params)
     end
 
     # сеттеры 
@@ -70,7 +73,7 @@ class Student < Student_short
      end
 
     def last_name=(last_name)
-        raise ArgumentError, "Incorrect value: last_name=#{last_name}!" if !last_name.nil? && !Student.valid_name?(last_name)
+        raise ArgumentError, "Incorrect value: last_name=#{last_name}" if !last_name.nil? && !Student.valid_name?(last_name)
         @last_name = last_name
     end
 
@@ -105,18 +108,18 @@ class Student < Student_short
         "#{last_name} #{first_name[0]}. #{surname[0]}."
     end
 
+    # краткая информация о студенте
+    def getInfo
+        "#{short_name}, #{contact}, git=#{git}"
+    end
 
-    # контакт
+
+    # установка контакта
     def contact
         return @contact = "phone=#{phone}" unless phone.nil?
         return @contact = "telegram=#{telegram}" unless telegram.nil?
         return @contact = "email=#{email}" unless email.nil?
         nil
-    end
-    
-    # краткая информация о студенте
-    def getInfo
-        "#{short_name}, #{contact}, git=#{git}"
     end
 
 
@@ -124,7 +127,9 @@ class Student < Student_short
         self.phone = phone if phone
         self.telegram = telegram if telegram
         self.email = email if email
+        @contact = contact
     end
+
 
     # представление объекта в виде строки
     def to_s
