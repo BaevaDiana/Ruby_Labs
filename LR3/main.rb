@@ -5,6 +5,8 @@ require_relative '/home/diana/LR3/repositories/data_sources/student_list_base'
 require_relative '/home/diana/LR3/repositories/data_sources/strategy/student_list_txt'
 require_relative '/home/diana/LR3/repositories/data_sources/strategy/student_list_json'
 require_relative '/home/diana/LR3/repositories/data_sources/strategy/student_list_yaml'
+require_relative '/home/diana/LR3/repositories/dbstudents'
+require_relative '/home/diana/LR3/repositories/student_list_db'
 require 'json'
 require 'mysql2'
 
@@ -97,7 +99,7 @@ require 'mysql2'
 #
 # puts "Успешно записано и прочитано #{stud_list_txt.student_count} студентов:"
 
-# Создаем соединение с базой данных
+# создаем соединение с базой данных
 client = Mysql2::Client.new(
   :host => 'localhost',
   :username => 'root',
@@ -105,10 +107,16 @@ client = Mysql2::Client.new(
   :database => 'student_db'
 )
 
-# Выполняем SELECT-запрос
+# тестирование
+db = StudentsListDB.new
+student = Student.new('Голубин', 'Глеб', 'Геннадьевич', phone: '79698876534' )
+db.add_student(student)
+puts db.student_count
+
+# выполняем SELECT-запрос
 results = client.query('SELECT * FROM students')
 
-# Выводим результаты на экран
+# выводим результаты на экран
 results.each do |row|
   puts row.inspect
 end
