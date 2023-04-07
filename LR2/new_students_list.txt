@@ -1,1 +1,0 @@
-{"StudentList":["Баева Диана ","Баев Андрей  id=1 telegram=@baev_andrey","Иванов Алексей  phone=79181461800 git=@alexiv email=alexiv@gmail.com"]}
