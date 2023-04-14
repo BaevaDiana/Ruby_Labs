@@ -1,0 +1,216 @@
+@startuml
+'https://plantuml.com/class-diagram
+ hide circle
+ skinparam linetype ortho
+
+class StudentShort
+{
+    -last_name: String
+    -initials: String
+    -id: Integer
+    -git: String
+    -contact: String
+--
+    +initialize(Student)
+    +{static}from_str(id,str)
+    +to_s(): String
+    +short_name(): String
+    +contact?(): Boolean
+    +git?(): Boolean
+    +validate(): Boolean
+.. Геттеры ..
+    +last_name(): String
+    +initials(): String
+    +id(): Integer
+    +git(): String
+    +contact(): String
+}
+
+class Student extends StudentShort {
+    -first_name: String
+    -surname: String
+    -phone: String
+    -telegram: String
+    -email: String
+--
+    +{static}valid_name?(String): Boolean
+    +{static}valid_phone?(String): Boolean
+    +{static}valid_account?(String): Boolean
+    +{static}valid_email?(String): Boolean
+    +initialize(Str, Str, Str, Int, Str, Str, Str, Str)
+    +{static}init_from_json(String)
+    +{static}from_hash(String)
+    +set_contacts(String, String, String)
+    +to_s(): String
+    +short_name(): String
+    +short_info(): String
+    .. Геттеры ..
+    +phone(): String
+    +telegram(): String
+    +email(): String
+    +first_name(): String
+    +surname(): String
+    -contact(): String
+    .. Сеттеры ..
+    +id=(Integer)
+    +git=(String)
+    +phone=(String)
+    +telegram=(String)
+    +email=(String)
+    +last_name=(String)
+    +first_name=(String)
+    +surname=(String)
+}
+
+abstract class DataList
+{
+    -selected_objects: Array
+    -objects_list: Array
+--
+    +initialize(Array)
+    +select(number): Array
+    +clear_select(): Array
+    +get_selected(Array): Array
+    #get_names()
+    +get_data(): Array
+    #table_fields(Object): Array
+    ..Геттеры..
+    -selected_objects: Array
+    -objects_list: Array
+    ..Сеттеры..
+    -selected_objects=(Array)
+    +objects_list=(Array)
+
+}
+class DataTable
+{
+    -table: Array
+    -rows_count: Integer
+    -cols_count: Integer
+--
+    +initialize(Array)
+    +get_item(Integer,Integer): String
+    +to_s(): String
+    ..Геттеры..
+    -table(): Array
+    +rows_count(): Integer
+    +cols_count(): Integer
+    ..Сеттеры..
+    -table=(Array)
+    -rows_count=(Integer)
+    -cols_count=(Integer)
+}
+
+class DataListStudentShort extends DataList{
+     --
+     +initialize(Array)
+     +get_names(): DataTable
+    #table_fields(Object): Array
+
+ }
+
+
+abstract class StudentsListBase {
+     -students: Array
+     -cur_id: Integer
+     --
+     -initialize()
+     +load_from_file(String)
+     +save_to_file(String)
+     +student_by_id(Integer): Student
+     +student_by_name(String): Array
+     +k_n_student_short_list(Integer, Integer, DataList: nil): DataList
+     +sorted(): Array
+     +add_student(Student)
+     +replace_student(Integer, Student)
+     +remove_student(Integer)
+     +student_count(): Integer
+     #str_to_list(String): Array
+     #list_to_str(Array): String
+     -update_cur_id()
+     .. Геттеры ..
+     -students(): Array
+     -cur_id(): Integer
+     .. Сеттеры ..
+     -students=(Array)
+     -cur_id=(Integer)
+ }
+
+ class StudentsListTxt extends StudentsListBase {
+     --
+     -transform_to_hashes(String): Array
+     -transform_to_strings(Array): String
+     #str_to_list(String): Array
+     #list_to_str(Array): String
+ }
+
+ class StudentsListJson extends StudentsListBase {
+     --
+     #str_to_list(String): Array
+     #list_to_str(Array): String
+ }
+
+ class StudentsListYAML extends StudentsListBase {
+     --
+     #str_to_list(String): Array
+     #list_to_str(Array): String
+ }
+ class DBStudent {
+     -instance_mutex: Mutex
+     -instance: DBStudent
+     -client: SQLite2::Client
+     --
+     +{static}instance(): DBStudent
+     -initialize()
+     +prepare_exec(String, *Object): SQLite2::Result
+     +query(String): SQLite2::Result
+ }
+class StudentsListDB {
+     -client: DBStudent
+     --
+     +initialize()
+     +student_by_id(Integer): Student
+     +get_k_n_student_short_list(Integer, Integer): DataList
+     +add_student(Student)
+     +replace_student(Integer, Student)
+     +remove_student(Integer)
+     +student_count(): Integer
+     .. Геттеры ..
+     -students(): DBStudent
+     .. Сеттеры ..
+     -students=(DBStudent)
+ }
+
+class StudentList {
+-data_adapter
+     +student_by_id(Integer): Student
+     +get_k_n_student_short_list(Integer, Integer): DataList
+     +add_student(Student)
+     +replace_student(Integer, Student)
+     +remove_student(Integer)
+     +student_count(): Integer
+}
+
+class StudentListAdapter {
+-file: StudentListBase
+-file_path: String
+     +initialize()
+     +student_by_id(Integer): Student
+     +get_k_n_student_short_list(Integer, Integer): DataList
+     +add_student(Student)
+     +replace_student(Integer, Student)
+     +remove_student(Integer)
+     +student_count(): Integer
+}
+DataList ..> DataTable
+DataListStudentShort o-- StudentShort
+StudentsListDB o-- DBStudent
+DataListStudentShort o-- StudentShort
+
+
+StudentList *-- StudentListAdapter
+StudentListAdapter o-- StudentsListBase
+StudentList *-- StudentListAdapter
+
+@enduml
+
