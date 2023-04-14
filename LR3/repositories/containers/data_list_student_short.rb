@@ -1,5 +1,5 @@
 require_relative '/home/diana/LR3/repositories/containers/data_list'
-
+require_relative '/home/diana/LR3/repositories/containers/data_table'
 class DataListStudentShort < DataList
   
   public_class_method :new
