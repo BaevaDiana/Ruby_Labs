@@ -34,14 +34,17 @@ class Window<FXMainWindow
 
   def create
     super
-    show
-    @controller.on_view_create
+    # show
+    # @controller.on_view_create
     @controller.refresh_data(@current_page, @students_on_page)
+    @controller.show_view
   end
 
   def update_count_students(count_students)
     @count_student = count_students
+    # @page_label.text = "#{@current_page}/ #{(@count_student / @students_on_page.to_f).ceil}"
     #изменить отображение страниц
+    @page_label.text = "#{@current_page}/ #{(@count_student[0]["COUNT(id)"] / @students_on_page.to_f).ceil}"
 
   end
 
@@ -49,7 +52,9 @@ class Window<FXMainWindow
     row_number=0
     table.each do |row|
       row_number+=1
-      (1..3).each { |index_field| @table.setItemText(row_number, index_field-1, row[index_field])  }
+      (1..3).each { |index_field| @table.setItemText(row_number, index_field-1, row[index_field])
+      }
+      row_number+=1
     end
   end
 
@@ -92,8 +97,8 @@ class Window<FXMainWindow
     btn_back = FXButton.new(change_page, "Назад", :opts=> BUTTON_INITIAL)
     btn_back.textColor = Fox.FXRGB(0,23,175)
     # добавить отображение со страницы, на которой мы сейчас
-    res = Array(1..@count_page).join(',')
-    page_label = FXLabel.new(change_page, res)
+    # res = Array(1..@count_page).join(',')
+    @page_label = FXLabel.new(change_page, '1')
     btn_next = FXButton.new(change_page, "Далее", :opts=> BUTTON_INITIAL)
     btn_next.textColor = Fox.FXRGB(0,23,175)
 
