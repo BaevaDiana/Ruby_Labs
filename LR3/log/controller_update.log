@@ -1,0 +1,14 @@
+# Logfile created on 2023-05-19 21:37:40 +0300 by logger.rb/v1.4.3
+I, [2023-05-19T21:37:40.580007 #7975]  INFO -- : Adding view to update student controller
+I, [2023-05-19T21:37:45.175463 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:45.175640 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: telegram=@!
+I, [2023-05-19T21:37:46.519317 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:47.006719 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:47.181935 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:47.374071 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:47.693987 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:47.941563 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:48.126035 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:48.245479 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:49.664888 #7975]  INFO -- : Saving updated student
+I, [2023-05-19T21:37:49.670914 #7975]  INFO -- : Executing add student operation

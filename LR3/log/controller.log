@@ -1,0 +1,17 @@
+# Logfile created on 2023-05-19 21:36:28 +0300 by logger.rb/v1.4.3
+I, [2023-05-19T21:36:28.401566 #7975]  INFO -- : Refreshing data with k_page=1 and number_students=3
+I, [2023-05-19T21:36:28.508419 #7975]  INFO -- : Data refreshed successfully with k_page=1 and number_students=3
+I, [2023-05-19T21:36:32.187567 #7975]  INFO -- : Refreshing data with k_page=2 and number_students=3
+I, [2023-05-19T21:36:32.194079 #7975]  INFO -- : Data refreshed successfully with k_page=2 and number_students=3
+I, [2023-05-19T21:36:32.339451 #7975]  INFO -- : Refreshing data with k_page=3 and number_students=3
+I, [2023-05-19T21:36:32.345676 #7975]  INFO -- : Data refreshed successfully with k_page=3 and number_students=3
+I, [2023-05-19T21:36:35.124892 #7975]  INFO -- : Refreshing data with k_page=3 and number_students=3
+I, [2023-05-19T21:36:35.131617 #7975]  INFO -- : Data refreshed successfully with k_page=3 and number_students=3
+I, [2023-05-19T21:36:35.136274 #7975]  INFO -- : Deleted students with IDs: 40
+I, [2023-05-19T21:37:32.156675 #7975]  INFO -- : Refreshing data with k_page=3 and number_students=3
+I, [2023-05-19T21:37:32.164707 #7975]  INFO -- : Data refreshed successfully with k_page=3 and number_students=3
+I, [2023-05-19T21:37:40.578161 #7975]  INFO -- : Changing student contact
+I, [2023-05-19T21:37:49.671021 #7975]  INFO -- : Refreshing data with k_page=3 and number_students=3
+I, [2023-05-19T21:37:49.675731 #7975]  INFO -- : Data refreshed successfully with k_page=3 and number_students=3
+I, [2023-05-19T21:37:52.719180 #7975]  INFO -- : Refreshing data with k_page=3 and number_students=3
+I, [2023-05-19T21:37:52.727702 #7975]  INFO -- : Data refreshed successfully with k_page=3 and number_students=3

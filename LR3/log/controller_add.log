@@ -1,0 +1,146 @@
+# Logfile created on 2023-05-19 21:36:36 +0300 by logger.rb/v1.4.3
+I, [2023-05-19T21:36:43.698050 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:36:43.698385 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: first_name=G!
+I, [2023-05-19T21:36:44.008328 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:36:44.008527 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: first_name=Gt!
+I, [2023-05-19T21:36:44.712864 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:36:44.713101 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: first_name=G!
+I, [2023-05-19T21:36:44.920836 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:53.001663 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:36:53.001823 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: first_name=И!
+I, [2023-05-19T21:36:53.449762 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:53.665748 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:53.841819 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:54.154304 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:54.609654 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:56.050189 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:56.386379 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:58.261284 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:36:58.261458 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: last_name=И
+I, [2023-05-19T21:36:58.838227 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:59.068791 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:59.189384 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:36:59.661510 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:00.044760 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:02.164751 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:02.164901 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: paternal_name=И!
+I, [2023-05-19T21:37:02.516892 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:02.718293 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:02.812975 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:03.012875 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:03.229157 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:03.441348 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:03.572753 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:07.526402 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:07.526691 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ш!
+I, [2023-05-19T21:37:08.158209 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:08.158447 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шм!
+I, [2023-05-19T21:37:08.374572 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:08.374756 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмф!
+I, [2023-05-19T21:37:08.605985 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:08.606230 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт!
+I, [2023-05-19T21:37:09.109320 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:09.109478 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_!
+I, [2023-05-19T21:37:09.405710 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:09.405893 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_ш!
+I, [2023-05-19T21:37:09.991825 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:09.992074 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_шм!
+I, [2023-05-19T21:37:10.174676 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:10.174842 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_шмф!
+I, [2023-05-19T21:37:10.334249 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:10.334471 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_шмфт!
+I, [2023-05-19T21:37:11.261978 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.262137 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_шмф!
+I, [2023-05-19T21:37:11.764562 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.764753 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_шм!
+I, [2023-05-19T21:37:11.793926 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.794073 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_ш!
+I, [2023-05-19T21:37:11.823599 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.823746 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт_!
+I, [2023-05-19T21:37:11.854031 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.854210 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмфт!
+I, [2023-05-19T21:37:11.884743 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.884920 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шмф!
+I, [2023-05-19T21:37:11.915192 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.915345 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=шм!
+I, [2023-05-19T21:37:11.947287 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:11.947462 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ш!
+I, [2023-05-19T21:37:11.978651 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:13.038404 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:13.038678 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=i!
+I, [2023-05-19T21:37:13.751401 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:13.751691 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=iv!
+I, [2023-05-19T21:37:13.942388 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:13.942580 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=iva!
+I, [2023-05-19T21:37:14.126888 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:14.127046 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivan!
+I, [2023-05-19T21:37:14.710369 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:14.710633 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivano!
+I, [2023-05-19T21:37:14.941979 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:14.942168 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov!
+I, [2023-05-19T21:37:16.135430 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:16.135613 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_!
+I, [2023-05-19T21:37:16.518897 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:16.519123 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_i!
+I, [2023-05-19T21:37:16.975235 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:16.975426 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_iv!
+I, [2023-05-19T21:37:17.160309 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:17.160669 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_iva!
+I, [2023-05-19T21:37:17.270067 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:17.270222 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan!
+I, [2023-05-19T21:37:17.647245 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:17.647429 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_!
+I, [2023-05-19T21:37:17.983501 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:17.983718 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_i!
+I, [2023-05-19T21:37:18.318829 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:18.319071 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_in!
+I, [2023-05-19T21:37:19.569204 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:19.569404 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_i!
+I, [2023-05-19T21:37:20.112202 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:20.112366 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_iv!
+I, [2023-05-19T21:37:20.287518 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:20.287725 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_iva!
+I, [2023-05-19T21:37:20.463560 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:20.463736 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivan!
+I, [2023-05-19T21:37:20.759221 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:20.759380 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivano!
+I, [2023-05-19T21:37:21.287528 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:21.287732 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanov!
+I, [2023-05-19T21:37:21.471421 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:21.471602 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovi!
+I, [2023-05-19T21:37:21.719317 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:21.719520 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovic!
+I, [2023-05-19T21:37:21.878590 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:21.878802 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich!
+I, [2023-05-19T21:37:22.935258 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:22.935448 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@!
+I, [2023-05-19T21:37:25.535361 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:25.535525 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ь!
+I, [2023-05-19T21:37:25.760060 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:25.760222 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ьф!
+I, [2023-05-19T21:37:25.943931 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:25.944141 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ьфш!
+I, [2023-05-19T21:37:26.200053 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:26.200213 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ьфшд!
+I, [2023-05-19T21:37:26.744085 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:26.744317 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ьфш!
+I, [2023-05-19T21:37:26.911498 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:26.911685 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ьф!
+I, [2023-05-19T21:37:27.056021 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:27.056211 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ь!
+I, [2023-05-19T21:37:27.208548 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:27.208785 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@!
+I, [2023-05-19T21:37:28.248378 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:28.248624 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@m!
+I, [2023-05-19T21:37:28.375622 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:28.375861 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@ma!
+I, [2023-05-19T21:37:28.510842 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:28.511202 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@mai!
+I, [2023-05-19T21:37:28.742112 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:28.742272 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@mail!
+I, [2023-05-19T21:37:28.999293 #7975]  INFO -- : Validating fields
+E, [2023-05-19T21:37:28.999567 #7975] ERROR -- : Error occurred while validating fields: Incorrect value: email=ivanov_ivan_ivanovich@mail.!
+I, [2023-05-19T21:37:29.893043 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:30.174062 #7975]  INFO -- : Validating fields
+I, [2023-05-19T21:37:32.149595 #7975]  INFO -- : Saving student
+I, [2023-05-19T21:37:32.156561 #7975]  INFO -- : Executing add student operation
