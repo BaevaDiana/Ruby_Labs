@@ -1,0 +1,3 @@
+last_name: "Баева", first_name: "Диана", surname: "Николаевна", id: 1
+last_name: "Шатохин", first_name: "Артем", surname: "Вячеславович", id: 2, telegram: "@shah_ayo"
+last_name: "Голубин", first_name: "Глеб", surname: "Геннадьевич", id: 3, phone: "79181461800", email: "gol_gleb@gmail.com", git: "@ggleb"
