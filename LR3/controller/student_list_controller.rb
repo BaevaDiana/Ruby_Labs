@@ -55,6 +55,7 @@ class StudentListController
 
   # добавление студента
   def student_add
+    @logger.info('Add student')
     controller = AddStudentController.new(@student_list)
     show_dialog(controller)
   end
@@ -103,7 +104,6 @@ class StudentListController
     view = CreateStudentDialog.new(@view, controller)
     controller.add_view(view)
     controller.execute
-
     @view.refresh
   end
 

@@ -1,0 +1,3 @@
+class StudentLabController
+
+end
