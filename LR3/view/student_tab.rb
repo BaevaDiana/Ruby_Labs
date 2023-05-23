@@ -1,6 +1,8 @@
 require 'fox16'
 include Fox
+
 require_relative '/home/diana/LR3/controller/student_list_controller'
+
 class TabStudent<FXVerticalFrame
   def initialize(p, *args, &blk)
     super
@@ -16,17 +18,21 @@ class TabStudent<FXVerticalFrame
     update_page_label
   end
 
-  def on_datalist_changed(table)
+  def self.update_data_table(table_self, new_table)
     row_number=0
-    (0...@table.getNumRows).each do |row|
-      (0...@table.getNumColumns).each do |col|
-        @table.setItemText(row, col, "")
+    (0...table_self.getNumRows).each do |row|
+      (0...table_self.getNumColumns).each do |col|
+        table_self.setItemText(row, col, "")
       end
     end
-    table.each do |row|
-      (1..3).each { |index_field| @table.setItemText(row_number, index_field-1, row[index_field].to_s)  }
+    new_table.each do |row|
+      (1..3).each { |index_field| table_self.setItemText(row_number, index_field-1, row[index_field].to_s)  }
       row_number+=1
     end
+  end
+
+  def on_datalist_changed(table)
+    TabStudent.update_data_table(@table, table)
   end
 
   def refresh
@@ -40,7 +46,6 @@ class TabStudent<FXVerticalFrame
   end
 
   def add_filters
-    # Filter
     frame_filter = FXVerticalFrame.new(self, :padTop=>50)
     frame_filter.resize(500, 300)
 
@@ -50,7 +55,7 @@ class TabStudent<FXVerticalFrame
                       [:telegram, "Телеграм"]
     ]
 
-    # ФИЛЬТР ИМЕНИ
+    # фильтр имени
     name_label = FXLabel.new(frame_filter, "Фамилия и инициалы")
     name_text_field = FXTextField.new(frame_filter, 64)
     @filter = { short_name: name_text_field }
@@ -79,7 +84,7 @@ class TabStudent<FXVerticalFrame
     btn_back.textColor = FXRGB(0, 0, 0)
     btn_back.font = FXFont.new(app, "Arial", 10, :weight => FONTWEIGHT_BOLD)
 
-    #номер страницы
+    # номер страницы
     change_page = FXHorizontalFrame.new(page_controls, :opts=> LAYOUT_CENTER_X)
     @page_label = FXLabel.new(change_page, '1')
     @page_label.font = FXFont.new(app, "Arial", 10, :weight => FONTWEIGHT_BOLD)
@@ -144,7 +149,6 @@ class TabStudent<FXVerticalFrame
       @table.killSelection
     end
 
-
     # Делаем кнопки изменить и удалить неактивными по умолчанию
     btn_delete.disable
     combo_change.disable
@@ -191,7 +195,7 @@ class TabStudent<FXVerticalFrame
       end
     end
     btn_next.connect(SEL_COMMAND) do
-      if @current_page<(@count_student / @students_on_page.to_f).ceil
+      if @current_page<(@count_student[0] ["COUNT(id)"]/ @students_on_page.to_f).ceil
         @current_page+=1
         refresh
         update_page_label
