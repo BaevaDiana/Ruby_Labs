@@ -1,3 +1,0 @@
-class StudentLabController
-
-end
